@@ -1,0 +1,18 @@
+{
+  "name": "@appsightnet/nodejs-health-checks",
+  "version": "0.1.0",
+  "description": "This package amis to output similar to AspNetCore.Diagnostics.HealthChecks in nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+  },
+  "author": "yopiidev",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "prettier": "^2.8.8"
+  }
+}
