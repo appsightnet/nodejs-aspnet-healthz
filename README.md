@@ -2,7 +2,7 @@
 
 This package aims to provide output similar to the AspNetCore.Diagnostics.HealthChecks 6.\* package in NuGet.
 
-<details>
+<details open>
   <summary>:information_source: Information</summary>
   This package is currently minimally configured to support HealthReport and UIHealthReport output.
   To incorporate it into your routing, you will need to implement it on your own, depending on your framework.
