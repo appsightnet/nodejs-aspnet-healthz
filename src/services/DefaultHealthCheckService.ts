@@ -4,13 +4,13 @@ import {
   HealthCheckRegistration,
   HealthReport,
   HealthReportEntry,
-} from '../schemas'
+} from '@/schemas'
 import {
   DurationUtils,
   ErrorUtils,
   HealthReportUtils,
   PromiseUtils,
-} from '../utils'
+} from '@/utils'
 
 export class DefaultHealthCheckService implements HealthCheckService {
   private _options: HealthCheckServiceOptions

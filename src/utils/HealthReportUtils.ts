@@ -1,4 +1,4 @@
-import { HealthReportEntry, HealthStatus } from '../schemas'
+import { HealthReportEntry, HealthStatus } from '@/schemas'
 import { Constants } from './Constants'
 
 export class HealthReportUtils {

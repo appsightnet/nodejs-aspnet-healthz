@@ -1,3 +1,3 @@
-import { Constants } from '../utils'
+import { Constants } from '@/utils'
 
 export type HealthStatus = (typeof Constants.healthStatuses)[number]

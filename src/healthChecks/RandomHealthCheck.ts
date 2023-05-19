@@ -3,8 +3,8 @@ import {
   HealthCheckContext,
   HealthCheckResult,
   HealthStatus,
-} from '../schemas'
-import { Constants, RandomUtils } from '../utils'
+} from '@/schemas'
+import { Constants, RandomUtils } from '@/utils'
 
 export class RandomHealthCheck implements HealthCheck {
   async checkHealthAsync(
