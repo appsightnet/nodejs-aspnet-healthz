@@ -16,7 +16,7 @@ import { DefaultHealthCheckService } from './services'
 import { Constants, DurationUtils, UIHealthReportUtils } from './utils'
 
 export {
-  StubHealthCheck as HealthyHealthCheck,
+  StubHealthCheck,
   Constants,
   HealthCheck,
   HealthCheckContext,
