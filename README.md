@@ -2,6 +2,12 @@
 
 This package aims to provide output similar to the AspNetCore.Diagnostics.HealthChecks 6.\* package in NuGet.
 
+<details>
+  <summary>:information_source: Information</summary>
+  This package is currently minimally configured to support HealthReport and UIHealthReport output.
+  To incorporate it into your routing, you will need to implement it on your own, depending on your framework.
+</details>
+
 ## Motivation
 
 When operating containerized applications, configuring health checks becomes essential. Health checks are supported in various operational environments, and while the HTTP status code rules are generally consistent, the payload schema can vary depending on the environment.
