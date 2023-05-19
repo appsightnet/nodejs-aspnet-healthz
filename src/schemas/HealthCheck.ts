@@ -7,7 +7,7 @@ import { HealthCheckResult } from './HealthCheckResult'
 export interface HealthCheck {
   /**
    * Runs the health check, returning the status of the component being checked.
-   * @param context
+   * @param context A context object associated with the current execution.
    */
   checkHealthAsync(context: HealthCheckContext): Promise<HealthCheckResult>
 }
