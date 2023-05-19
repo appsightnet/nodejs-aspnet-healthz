@@ -8,7 +8,7 @@ describe('HealthReportUtils', () => {
         status: 'Healthy',
         duration: '00:00:00.000',
       },
-      ['degraded-1']: {
+      ['degraded-0']: {
         status: 'Degraded',
         duration: '00:00:00.000',
       },
@@ -30,11 +30,11 @@ describe('HealthReportUtils', () => {
         status: 'Healthy',
         duration: '00:00:00.000',
       },
-      ['degraded-1']: {
+      ['degraded-0']: {
         status: 'Degraded',
         duration: '00:00:00.000',
       },
-      ['unhealthy-1']: {
+      ['unhealthy-0']: {
         status: 'Unhealthy',
         duration: '00:00:00.000',
       },
