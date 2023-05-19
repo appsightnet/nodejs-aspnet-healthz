@@ -15,6 +15,11 @@ describe('DefaultHealthCheckService', () => {
         instance: new StubHealthCheck('Healthy'),
         tags: ['liveness'],
       },
+      {
+        name: 'healthy-3',
+        instance: new StubHealthCheck('Healthy'),
+        tags: ['readiness'],
+      },
     ],
   }
 
@@ -57,7 +62,7 @@ describe('DefaultHealthCheckService', () => {
           tags: ['liveness'],
         },
         {
-          name: 'healthy-3',
+          name: 'healthy-4',
           instance: new StubHealthCheck('Healthy'),
           tags: ['liveness'],
         },
