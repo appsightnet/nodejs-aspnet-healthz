@@ -1,13 +1,16 @@
-import { Constants } from './constants'
 import {
-  HealthCheckRegistration,
   HealthCheckService,
   HealthCheckServiceOptions,
+  HealthCheckRegistration,
   HealthReport,
   HealthReportEntry,
-} from './schemas'
-import { parseErrorMessage, withTimeout } from './utils'
-import { DurationConverter } from './converters'
+} from '../schemas'
+import {
+  DurationUtils,
+  ErrorUtils,
+  HealthReportUtils,
+  PromiseUtils,
+} from '../utils'
 
 export class DefaultHealthCheckService implements HealthCheckService {
   private _options: HealthCheckServiceOptions
@@ -21,7 +24,10 @@ export class DefaultHealthCheckService implements HealthCheckService {
     timeoutMilliseconds?: number
   ): Promise<HealthReport> {
     return timeoutMilliseconds
-      ? await withTimeout(this.runChecksAsync(predicate), timeoutMilliseconds)
+      ? await PromiseUtils.withTimeout(
+          this.runChecksAsync(predicate),
+          timeoutMilliseconds
+        )
       : await this.runChecksAsync(predicate)
   }
 
@@ -38,15 +44,13 @@ export class DefaultHealthCheckService implements HealthCheckService {
       }
     }
 
-    const minStatusIndex = Object.values(entries)
-      .map((x) => Constants.healthStatuses.indexOf(x.status))
-      .reduce((a, b) => Math.min(a, b))
+    const status = HealthReportUtils.getMinStatusByEntries(entries)
     const stopTime = Date.now()
     const totalDurationMs = stopTime - startTime
 
     return {
-      status: Constants.healthStatuses[minStatusIndex],
-      totalDuration: DurationConverter.fromMilliseconds(totalDurationMs),
+      status,
+      totalDuration: DurationUtils.fromMilliseconds(totalDurationMs),
       entries,
     }
   }
@@ -59,7 +63,7 @@ export class DefaultHealthCheckService implements HealthCheckService {
 
     try {
       const result = registration.timeoutMilliseconds
-        ? await withTimeout(
+        ? await PromiseUtils.withTimeout(
             registration.instance.checkHealthAsync(context),
             registration.timeoutMilliseconds
           )
@@ -70,7 +74,7 @@ export class DefaultHealthCheckService implements HealthCheckService {
       return {
         status: result.status,
         description: result.description,
-        duration: DurationConverter.fromMilliseconds(durationMs),
+        duration: DurationUtils.fromMilliseconds(durationMs),
         exception: result.exception,
         data: result.data,
         tags: registration.tags,
@@ -80,8 +84,8 @@ export class DefaultHealthCheckService implements HealthCheckService {
       const durationMs = stopTime - startTime
       return {
         status: registration.failureStatus ?? 'Unhealthy',
-        description: parseErrorMessage(error),
-        duration: DurationConverter.fromMilliseconds(durationMs),
+        description: ErrorUtils.getErrorMessage(error),
+        duration: DurationUtils.fromMilliseconds(durationMs),
         exception: error,
         tags: registration.tags,
       }
