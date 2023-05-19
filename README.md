@@ -105,7 +105,7 @@ const healthCheckService = new DefaultHealthCheckService(options)
 
 ```ts
 const healthReport = await healthCheckService.checkHealthAsync(
-  (predicate) => predicate.tags.includes('readiness'),
+  (predicate) => true,
   30000 // 30 seconds
 )
 ```
