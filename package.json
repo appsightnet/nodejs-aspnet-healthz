@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build tsconfig.build.json",
     "prepare": "npm run build",
     "test": "jest --silent=false --testTimeout=20000",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
@@ -13,6 +13,10 @@
   },
   "author": "yopiidev",
   "license": "Apache-2.0",
+  "files": [
+    "src",
+    "!**/__tests__"
+  ],
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "eslint": "^8.40.0",
