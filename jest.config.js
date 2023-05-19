@@ -4,7 +4,6 @@ const customJestConfig = {
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   // if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
   moduleDirectories: ['node_modules'],
-  // TODO: separate client/server tests and specify jest-environment-jsdom for client...
   testEnvironment: 'node', 
   preset: 'ts-jest',
   moduleNameMapper: {
