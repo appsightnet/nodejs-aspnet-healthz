@@ -32,5 +32,5 @@ export type HealthReportEntry = {
   /**
    * The tags associated with the health check.
    */
-  tags?: string[]
+  tags: string[]
 }

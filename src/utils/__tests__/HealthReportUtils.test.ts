@@ -7,14 +7,17 @@ describe('HealthReportUtils', () => {
       ['healthy-0']: {
         status: 'Healthy',
         duration: '00:00:00.000',
+        tags: [],
       },
       ['degraded-0']: {
         status: 'Degraded',
         duration: '00:00:00.000',
+        tags: [],
       },
       ['healthy-1']: {
         status: 'Healthy',
         duration: '00:00:00.000',
+        tags: [],
       },
     }
 
@@ -29,18 +32,22 @@ describe('HealthReportUtils', () => {
       ['healthy-0']: {
         status: 'Healthy',
         duration: '00:00:00.000',
+        tags: [],
       },
       ['degraded-0']: {
         status: 'Degraded',
         duration: '00:00:00.000',
+        tags: [],
       },
       ['unhealthy-0']: {
         status: 'Unhealthy',
         duration: '00:00:00.000',
+        tags: [],
       },
       ['healthy-1']: {
         status: 'Healthy',
         duration: '00:00:00.000',
+        tags: [],
       },
     }
 

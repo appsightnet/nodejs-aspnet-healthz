@@ -2,14 +2,17 @@
   "name": "@appsightnet/nodejs-aspnet-healthz",
   "version": "0.1.0",
   "description": "This package aims to provide report output similar to the AspNetCore.Diagnostics.HealthChecks package in NuGet.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --silent=false",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "jest --silent=false --testTimeout=20000",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "docs": "typedoc"
   },
   "author": "yopiidev",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "eslint": "^8.40.0",

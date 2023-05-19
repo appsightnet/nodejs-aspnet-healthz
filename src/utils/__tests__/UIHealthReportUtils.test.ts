@@ -9,6 +9,7 @@ describe('UIHealthReportUtils', () => {
       exception: error,
       duration: '00:00:00.000',
       status: 'Unhealthy',
+      tags: [],
     }
     const report: HealthReport = {
       entries: {
