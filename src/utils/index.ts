@@ -3,7 +3,6 @@ import { DurationUtils } from './DurationUtils'
 import { ErrorUtils } from './ErrorUtils'
 import { HealthReportUtils } from './HealthReportUtils'
 import { PromiseUtils } from './PromiseUtils'
-import { RandomUtils } from './RandomUtils'
 import { UIHealthReportUtils } from './UIHealthReportUtils'
 
 export {
@@ -12,6 +11,5 @@ export {
   ErrorUtils,
   HealthReportUtils,
   PromiseUtils,
-  RandomUtils,
   UIHealthReportUtils,
 }
