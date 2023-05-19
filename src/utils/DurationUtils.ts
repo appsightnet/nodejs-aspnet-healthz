@@ -1,4 +1,12 @@
+/**
+ * A utility for handling duration.
+ */
 export class DurationUtils {
+  /**
+   * Converts from milliseconds to duration string.
+   * @param milliseconds A time expressed in milliseconds.
+   * @returns A time expressed in duration string.
+   */
   static fromMilliseconds(milliseconds: number): string {
     const seconds = Math.floor(milliseconds / 1000)
     const minutes = Math.floor(seconds / 60)
@@ -17,6 +25,11 @@ export class DurationUtils {
     return duration
   }
 
+  /**
+   * Converts from duration string to milliseconds.
+   * @param duration A time expressed in duration string.
+   * @returns A time expressed in milliseconds.
+   */
   static toMilliseconds(duration: string): number {
     const [hours, minutes, secondsAndMilliseconds] = duration.split(':')
     const [seconds, milliseconds] = secondsAndMilliseconds.split('.')

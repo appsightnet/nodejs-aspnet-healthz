@@ -1,7 +1,15 @@
 import { HealthReport, UIHealthReport } from '../schemas'
 import { ErrorUtils } from './ErrorUtils'
 
+/**
+ * A utility for handling UIHealthReport.
+ */
 export class UIHealthReportUtils {
+  /**
+   * Converts from a HealthReport to an UIHealthReport.
+   * @param report A HealthReport instance.
+   * @returns A UIHealthReport instance.
+   */
   static fromHealthReport(report: HealthReport): UIHealthReport {
     return {
       status: report.status,
