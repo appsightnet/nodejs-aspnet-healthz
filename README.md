@@ -10,6 +10,17 @@ In my own experience, I frequently develop APIs using ASP.NET, and in such cases
 
 As I have been working more with Node.js recently, I decided to develop this package to enable handling the output of AspNetCore.Diagnostics.HealthChecks in Node.js.
 
+```plantuml
+@startuml
+node "Node.js Project\n(Wants to export UIHealthReport!)" as node1
+node "ASP.NET Project(Exports UIHealthReport)" as node2
+node "HealthChecks UI ASP.NET Project(Collects UIHealthReport)" as node3
+
+node1 <-- node3
+node2 <-- node3
+@enduml
+```
+
 ## Install
 
 `npm install @appsightnet/nodejs-aspnet-healthz`
@@ -100,3 +111,7 @@ const healthReport = await healthCheckService.checkHealthAsync(
 ## Change Log
 
 TBD
+
+## Acknowledgements
+
+- Special thanks to all contributors to [AspNetCore.Diagnostics.HealthChecks]([https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks]), which served as a valuable reference for this project.
