@@ -1,4 +1,4 @@
-import { HealthyHealthCheck } from './healthChecks'
+import { StubHealthCheck } from './healthChecks'
 import {
   HealthCheck,
   HealthCheckContext,
@@ -16,7 +16,7 @@ import { DefaultHealthCheckService } from './services'
 import { Constants, DurationUtils, UIHealthReportUtils } from './utils'
 
 export {
-  HealthyHealthCheck,
+  StubHealthCheck as HealthyHealthCheck,
   Constants,
   HealthCheck,
   HealthCheckContext,

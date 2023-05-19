@@ -7,7 +7,7 @@ export class HealthReportUtils {
   ): HealthStatus {
     const minIndex = Object.values(entries)
       .map((x) => Constants.healthStatuses.indexOf(x.status))
-      .reduce((a, b) => Math.min(a, b))
+      .reduce((a, b) => Math.min(a, b), Infinity)
     return Constants.healthStatuses[minIndex]
   }
 }

@@ -1,4 +1,4 @@
-import { HealthyHealthCheck } from './HealthyHealthCheck'
+import { StubHealthCheck } from './StubHealthCheck'
 import { RandomHealthCheck } from './RandomHealthCheck'
 
-export { HealthyHealthCheck, RandomHealthCheck }
+export { StubHealthCheck, RandomHealthCheck }
