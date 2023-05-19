@@ -25,7 +25,9 @@ graph LR
 
 ## Installation
 
-`npm install @appsightnet/nodejs-aspnet-healthz`
+```sh
+npm install @appsightnet/nodejs-aspnet-healthz
+```
 
 ## Usage
 
