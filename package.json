@@ -13,7 +13,7 @@
   "author": "yopiidev",
   "license": "Apache-2.0",
   "files": [
-    "src",
+    "dist",
     "!**/__tests__"
   ],
   "devDependencies": {
