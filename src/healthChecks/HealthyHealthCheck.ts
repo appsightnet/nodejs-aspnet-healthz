@@ -6,6 +6,7 @@ export class HealthyHealthCheck implements HealthCheck {
   ): Promise<HealthCheckResult> {
     return {
       status: 'Healthy',
+      description: `${context.registration.name} is healthy!`,
     }
   }
 }
