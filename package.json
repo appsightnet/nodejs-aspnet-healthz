@@ -2,6 +2,11 @@
   "name": "@appsightnet/nodejs-aspnet-healthz",
   "version": "0.1.0-alpha.4",
   "description": "This package aims to provide report output similar to the AspNetCore.Diagnostics.HealthChecks package in NuGet.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:appsightnet/nodejs-aspnet-healthz.git"
+  },
+  "homepage": "https://github.com/appsightnet/nodejs-aspnet-healthz#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
