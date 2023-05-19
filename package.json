@@ -1,7 +1,7 @@
 {
   "name": "@appsightnet/nodejs-health-checks",
   "version": "0.1.0",
-  "description": "This package aims to output similar to AspNetCore.Diagnostics.HealthChecks in nodejs.",
+  "description": "A Node.js package that aims to provide similar output to the AspNetCore.Diagnostics.HealthChecks package in NuGet.",
   "main": "index.js",
   "scripts": {
     "test": "jest --silent=false",
