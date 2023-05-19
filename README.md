@@ -10,15 +10,14 @@ In my own experience, I frequently develop APIs using ASP.NET, and in such cases
 
 As I have been working more with Node.js recently, I decided to develop this package to enable handling the output of AspNetCore.Diagnostics.HealthChecks in Node.js.
 
-```plantuml
-@startuml
-node "Node.js Project\n(Wants to export UIHealthReport!)" as node1
-node "ASP.NET Project(Exports UIHealthReport)" as node2
-node "HealthChecks UI ASP.NET Project(Collects UIHealthReport)" as node3
+```mermaid
+graph LR
+    node1["Node.js Project\n(Wants to export UIHealthReport!)"]
+    node2["ASP.NET Project\n(Exports UIHealthReport)"]
+    node3["HealthChecks UI ASP.NET Project\n(Collects UIHealthReport)"]
 
-node1 <-- node3
-node2 <-- node3
-@enduml
+    node3-->node1
+    node3-->node2
 ```
 
 ## Install
