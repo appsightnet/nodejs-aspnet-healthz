@@ -23,7 +23,7 @@ graph LR
     node3-->node2
 ```
 
-## Install
+## Installation
 
 `npm install @appsightnet/nodejs-aspnet-healthz`
 
