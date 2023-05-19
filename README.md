@@ -69,7 +69,7 @@ console.log(JSON.stringify(uiHealthReport))
 
 ## API Reference
 
-TBD
+- [Docs](./docs/index.html)
 
 ## Options
 
@@ -107,7 +107,7 @@ const healthCheckService = new DefaultHealthCheckService(options)
 
 ```ts
 const healthReport = await healthCheckService.checkHealthAsync(
-  _ => true,
+  (_) => true,
   30000 // 30 seconds
 )
 ```
