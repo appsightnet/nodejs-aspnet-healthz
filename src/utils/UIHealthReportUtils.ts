@@ -1,5 +1,6 @@
-import { HealthReport, UIHealthReport } from '@/schemas'
+import { HealthReport, UIHealthReport, UIHealthReportEntry } from '@/schemas'
 import { ErrorUtils } from './ErrorUtils'
+import { UIHealthReportEntryUtils } from './UIHealthReportEntryUtils'
 
 /**
  * A utility for handling UIHealthReport.
@@ -11,15 +12,16 @@ export class UIHealthReportUtils {
    * @returns A UIHealthReport instance.
    */
   static fromHealthReport(report: HealthReport): UIHealthReport {
+    const entries: { [key: string]: UIHealthReportEntry } = {}
+
+    for (const [key, value] of Object.entries(report.entries)) {
+      entries[key] = UIHealthReportEntryUtils.fromHealthReportEntry(value)
+    }
+
     return {
       status: report.status,
       totalDuration: report.totalDuration,
-      entries: Object.entries(report.entries).reduce((acc, [key, value]) => {
-        if (key === 'exception' && value) {
-          acc[key] = ErrorUtils.getErrorMessage(value)
-        }
-        return acc
-      }, {}),
+      entries,
     }
   }
 }

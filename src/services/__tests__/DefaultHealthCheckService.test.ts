@@ -6,17 +6,17 @@ describe('DefaultHealthCheckService', () => {
   const defaultOptions: HealthCheckServiceOptions = {
     registrations: [
       {
-        name: 'healthy-1',
+        name: 'healthy-0',
         instance: new StubHealthCheck('Healthy'),
         tags: ['liveness', 'readiness'],
       },
       {
-        name: 'healthy-2',
+        name: 'healthy-1',
         instance: new StubHealthCheck('Healthy'),
         tags: ['liveness'],
       },
       {
-        name: 'healthy-3',
+        name: 'healthy-2',
         instance: new StubHealthCheck('Healthy'),
         tags: ['readiness'],
       },
@@ -57,12 +57,12 @@ describe('DefaultHealthCheckService', () => {
       registrations: [
         ...defaultOptions.registrations,
         {
-          name: 'degraded-1',
+          name: 'degraded-0',
           instance: new StubHealthCheck('Degraded'),
           tags: ['liveness'],
         },
         {
-          name: 'healthy-4',
+          name: 'healthy-3',
           instance: new StubHealthCheck('Healthy'),
           tags: ['liveness'],
         },
@@ -83,12 +83,12 @@ describe('DefaultHealthCheckService', () => {
       registrations: [
         ...defaultOptions.registrations,
         {
-          name: 'degraded-1',
+          name: 'degraded-0',
           instance: new StubHealthCheck('Degraded'),
           tags: ['liveness'],
         },
         {
-          name: 'unhealthy-1',
+          name: 'unhealthy-0',
           instance: new StubHealthCheck('Unhealthy'),
           tags: ['liveness'],
         },
