@@ -1,6 +1,6 @@
 ## Overview
 
-This package aims to provide output similar to the AspNetCore.Diagnostics.HealthChecks 6.\* package in NuGet.
+This package aims to provide output similar to the [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 6.\* package in NuGet.
 
 > **Note**
 > This package is currently minimally configured to support HealthReport and UIHealthReport output. Therefore, for other use cases such as integrating it into routing, you will need to implement it individually for each framework.
@@ -116,4 +116,4 @@ TBD
 
 ## Acknowledgements
 
-- Special thanks to all contributors to [AspNetCore.Diagnostics.HealthChecks]([https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks]), which served as a valuable reference for this project.
+- Special thanks to all contributors to [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), which served as a valuable reference for this project.
