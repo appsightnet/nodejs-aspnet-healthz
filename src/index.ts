@@ -1,4 +1,4 @@
-import { Constants } from './constants'
+import { StubHealthCheck } from './healthChecks'
 import {
   HealthCheck,
   HealthCheckContext,
@@ -13,9 +13,10 @@ import {
   UIHealthReportEntry,
 } from './schemas'
 import { DefaultHealthCheckService } from './services'
-import { DurationConverter, UIHealthReportConverter } from './converters'
+import { Constants, DurationUtils, UIHealthReportUtils } from './utils'
 
 export {
+  StubHealthCheck,
   Constants,
   HealthCheck,
   HealthCheckContext,
@@ -29,6 +30,6 @@ export {
   UIHealthReport,
   UIHealthReportEntry,
   DefaultHealthCheckService,
-  DurationConverter,
-  UIHealthReportConverter,
+  DurationUtils,
+  UIHealthReportUtils,
 }

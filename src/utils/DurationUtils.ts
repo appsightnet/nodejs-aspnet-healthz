@@ -1,22 +1,12 @@
-import { HealthReport, UIHealthReport } from './schemas'
-import { parseErrorMessage } from './utils'
-
-export class UIHealthReportConverter {
-  static fromHealthReport(report: HealthReport): UIHealthReport {
-    return {
-      status: report.status,
-      totalDuration: report.totalDuration,
-      entries: Object.entries(report.entries).reduce((acc, [key, value]) => {
-        if (key === 'exception' && value) {
-          acc[key] = parseErrorMessage(value)
-        }
-        return acc
-      }, {}),
-    }
-  }
-}
-
-export class DurationConverter {
+/**
+ * A utility for handling duration.
+ */
+export class DurationUtils {
+  /**
+   * Converts from milliseconds to duration string.
+   * @param milliseconds A time expressed in milliseconds.
+   * @returns A time expressed in duration string.
+   */
   static fromMilliseconds(milliseconds: number): string {
     const seconds = Math.floor(milliseconds / 1000)
     const minutes = Math.floor(seconds / 60)
@@ -35,6 +25,11 @@ export class DurationConverter {
     return duration
   }
 
+  /**
+   * Converts from duration string to milliseconds.
+   * @param duration A time expressed in duration string.
+   * @returns A time expressed in milliseconds.
+   */
   static toMilliseconds(duration: string): number {
     const [hours, minutes, secondsAndMilliseconds] = duration.split(':')
     const [seconds, milliseconds] = secondsAndMilliseconds.split('.')

@@ -1,18 +1,29 @@
 {
-  "name": "@appsightnet/nodejs-health-checks",
-  "version": "0.1.0",
-  "description": "This package amis to output similar to AspNetCore.Diagnostics.HealthChecks in nodejs.",
-  "main": "index.js",
+  "name": "@appsightnet/nodejs-aspnet-healthz",
+  "version": "0.1.0-alpha.4",
+  "description": "This package aims to provide report output similar to the AspNetCore.Diagnostics.HealthChecks package in NuGet.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'"
+    "build": "tsc --build tsconfig.build.json",
+    "prepare": "npm run build",
+    "test": "jest --silent=false --testTimeout=20000",
+    "docs": "typedoc"
   },
   "author": "yopiidev",
-  "license": "MIT",
+  "license": "Apache-2.0",
+  "files": [
+    "dist",
+    "!**/__tests__"
+  ],
   "devDependencies": {
+    "@types/jest": "^29.5.1",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
-    "prettier": "^2.8.8"
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "typedoc": "^0.24.7"
   }
 }
