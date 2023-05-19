@@ -1,5 +1,5 @@
 {
-  "name": "@appsightnet/nodejs-health-checks",
+  "name": "@appsightnet/nodejs-aspnet-healthz",
   "version": "0.1.0",
   "description": "A Node.js package that aims to provide similar output to the AspNetCore.Diagnostics.HealthChecks package in NuGet.",
   "main": "index.js",
