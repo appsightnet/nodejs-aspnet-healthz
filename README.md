@@ -1,6 +1,6 @@
 ## Overview
 
-This package aims to provide output similar to the AspNetCore.Diagnostics.HealthChecks package in NuGet.
+This package aims to provide output similar to the AspNetCore.Diagnostics.HealthChecks 6.\* package in NuGet.
 
 ## Motivation
 
@@ -97,14 +97,6 @@ const healthReport = await healthCheckService.checkHealthAsync(
 )
 ```
 
-## License
-
-MIT
-
 ## Change Log
-
-TBD
-
-## Credits
 
 TBD
