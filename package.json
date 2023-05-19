@@ -1,7 +1,7 @@
 {
   "name": "@appsightnet/nodejs-health-checks",
   "version": "0.1.0",
-  "description": "This package amis to output similar to AspNetCore.Diagnostics.HealthChecks in nodejs.",
+  "description": "This package aims to output similar to AspNetCore.Diagnostics.HealthChecks in nodejs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
