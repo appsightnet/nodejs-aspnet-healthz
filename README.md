@@ -69,7 +69,7 @@ console.log(JSON.stringify(uiHealthReport))
 
 ## API Reference
 
-- [Docs](./docs/index.html)
+- [Docs](https://appsightnet.github.io/nodejs-aspnet-healthz/)
 
 ## Options
 
