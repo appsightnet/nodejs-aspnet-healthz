@@ -1,10 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "isolatedModules": false,
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "isolatedModules": false
   },
   "exclude": ["node_modules", "**/__tests__/**"]
 }

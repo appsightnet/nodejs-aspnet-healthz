@@ -1,4 +1,4 @@
-import { HealthReportEntry } from '@/schemas'
+import { HealthReportEntry } from '../../schemas'
 import { HealthReportUtils } from '../HealthReportUtils'
 
 describe('HealthReportUtils', () => {

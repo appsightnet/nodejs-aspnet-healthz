@@ -1,6 +1,6 @@
-import { StubHealthCheck } from '@/healthChecks'
+import { StubHealthCheck } from '../../healthChecks'
 import { DefaultHealthCheckService } from '../DefaultHealthCheckService'
-import { HealthCheckServiceOptions } from '@/schemas'
+import { HealthCheckServiceOptions } from '../../schemas'
 
 describe('DefaultHealthCheckService', () => {
   const defaultOptions: HealthCheckServiceOptions = {

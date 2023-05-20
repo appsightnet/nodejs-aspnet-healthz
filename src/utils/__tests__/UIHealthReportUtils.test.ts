@@ -1,4 +1,4 @@
-import { HealthReport, HealthReportEntry } from '@/schemas'
+import { HealthReport, HealthReportEntry } from '../../schemas'
 import { UIHealthReportUtils } from '../UIHealthReportUtils'
 
 describe('UIHealthReportUtils', () => {

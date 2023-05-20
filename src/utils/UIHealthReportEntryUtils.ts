@@ -1,4 +1,4 @@
-import { HealthReportEntry, UIHealthReportEntry } from '@/schemas'
+import { HealthReportEntry, UIHealthReportEntry } from '../schemas'
 import { ErrorUtils } from './ErrorUtils'
 
 /**

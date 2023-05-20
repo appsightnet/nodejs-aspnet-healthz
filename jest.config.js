@@ -6,9 +6,6 @@ const customJestConfig = {
   moduleDirectories: ['node_modules'],
   testEnvironment: 'node', 
   preset: 'ts-jest',
-  moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
-  },
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {//the content you'd placed at "global"
       tsconfig: './tsconfig.test.json'

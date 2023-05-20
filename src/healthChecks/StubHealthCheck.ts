@@ -3,7 +3,7 @@ import {
   HealthCheckContext,
   HealthCheckResult,
   HealthStatus,
-} from '@/schemas'
+} from '../schemas'
 
 export class StubHealthCheck implements HealthCheck {
   private _status: HealthStatus

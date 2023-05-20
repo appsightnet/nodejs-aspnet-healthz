@@ -1,4 +1,4 @@
-import { HealthReport, UIHealthReport, UIHealthReportEntry } from '@/schemas'
+import { HealthReport, UIHealthReport, UIHealthReportEntry } from '../schemas'
 import { UIHealthReportEntryUtils } from './UIHealthReportEntryUtils'
 
 /**
